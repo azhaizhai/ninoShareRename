@@ -1,4 +1,4 @@
-package ninoShareRename;
+package cn.syuico;
 
 import java.io.*;
 import javax.swing.filechooser.*;
