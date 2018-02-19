@@ -7,7 +7,7 @@
 ### 使用前的准备：
 1.运行环境：需要电脑安装java。如果没有安装，请去[甲骨文官网](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下
 载安装并配置相应的环境变量。理论上所有支持java的系统都可以运行该程序<br />
-2.程序下载：[ninoShareRename v1.2](https://raw.githubusercontent.com/azhaizhai/ninoShareRename/master/ninoRename.zip)<br />
+2.程序下载：[ninoShareRename v1.3](https://raw.githubusercontent.com/azhaizhai/ninoShareRename/master/ninoRename.zip)<br />
 ### 使用方法
 1.将下载的zip文件解压。<br />
 2.如果你的java环境变量配置正确，那么可以双击.jar文件运行，如果配置有问题，可能需要执行如下命令<br />
