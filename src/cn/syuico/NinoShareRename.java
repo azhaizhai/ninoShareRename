@@ -31,9 +31,15 @@ public class NinoShareRename {
 		boolean results=true;
 		String renameStr;
 		for(String fileName:filesName) {
+			boolean fileStyle=false;
 			char[] fileNameChar=fileName.toCharArray();
 			for(int i=0;i<fileNameChar.length;i++) {
-				fileNameChar[i]++;
+				if(fileNameChar[i]=='.') {
+					fileStyle=true;
+				}
+				if(!fileStyle) {
+					fileNameChar[i]-=30;
+				}
 			}
 			renameStr=String.valueOf(fileNameChar);
 			boolean result=new File(folder+FILE_SEPARATOR+fileName).renameTo(new File(folder+FILE_SEPARATOR+renameStr));
