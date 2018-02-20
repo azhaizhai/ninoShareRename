@@ -34,11 +34,13 @@ public class NinoShareRename {
 			boolean fileStyle=false;
 			char[] fileNameChar=fileName.toCharArray();
 			for(int i=0;i<fileNameChar.length;i++) {
-				if(fileNameChar[i]=='.') {
-					fileStyle=true;
-				}
-				if(!fileStyle) {
-					fileNameChar[i]-=30;
+				if(!(fileNameChar[i]>=0&&fileNameChar[i]<=9)) {
+					if(fileNameChar[i]=='.') {
+						fileStyle=true;
+					}
+					if(!fileStyle) {
+						fileNameChar[i]--;
+					}
 				}
 			}
 			renameStr=String.valueOf(fileNameChar);
@@ -52,7 +54,7 @@ public class NinoShareRename {
 		// TODO Auto-generated method stub
 		String folder=getFolder();
 		if(folder==null) {
-			JOptionPane.showMessageDialog(null, "抱歉，你选择的路径可能有问题", "错误信息", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "您取消了操作或者选择了错误的路径，因此没有执行任何操作", "错误信息", JOptionPane.ERROR_MESSAGE);
 		}else {
 			String[] filesName=getFilesName(folder);
 			int warning=JOptionPane.showConfirmDialog(null, "你确定要将选中文件夹中包含的文件按照nino的规则重新命名吗？（如果选择yes，您稍后可以使用还原程序还原您的操作）", "警告信息", JOptionPane.YES_NO_OPTION);
