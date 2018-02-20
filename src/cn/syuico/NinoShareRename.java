@@ -34,7 +34,7 @@ public class NinoShareRename {
 			boolean fileStyle=false;
 			char[] fileNameChar=fileName.toCharArray();
 			for(int i=0;i<fileNameChar.length;i++) {
-				if(!(fileNameChar[i]>=0&&fileNameChar[i]<=9)) {
+				if(!(fileNameChar[i]>='0'&&fileNameChar[i]<='9')) {
 					if(fileNameChar[i]=='.') {
 						fileStyle=true;
 					}
